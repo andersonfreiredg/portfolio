@@ -4,7 +4,7 @@
  */
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Instagram, ExternalLink, X } from 'lucide-react';
+import { Instagram, ExternalLink, X, Mail } from 'lucide-react';
 
 const projectsData = [
   {
@@ -488,14 +488,18 @@ export default function App() {
                       initial={{ y: 30, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 1, delay: 0.4, ease: [0.76, 0, 0.24, 1] }}
-                      className="flex flex-col md:flex-row gap-6 md:gap-20 items-center"
+                      className="flex flex-col md:flex-row gap-6 md:gap-16 items-center"
                     >
+                      <a href="mailto:anddblk@gmail.com" className="group flex items-center gap-3 md:gap-4 text-xl md:text-4xl font-display font-bold uppercase hover:text-gray-400 transition-colors cursor-none">
+                        <Mail className="w-6 h-6 md:w-12 md:h-12 group-hover:-rotate-12 transition-transform" />
+                        Email
+                      </a>
                       <a href="https://instagram.com/andersonfreiredg" target="_blank" rel="noreferrer" className="group flex items-center gap-3 md:gap-4 text-xl md:text-4xl font-display font-bold uppercase hover:text-gray-400 transition-colors cursor-none">
-                        <Instagram className="w-6 h-6 md:w-12 md:h-12 group-hover:-rotate-12 transition-transform" />
+                        <Instagram className="w-6 h-6 md:w-12 md:h-12 group-hover:rotate-12 transition-transform" />
                         Instagram
                       </a>
                       <a href="https://behance.com/andersonfreire" target="_blank" rel="noreferrer" className="group flex items-center gap-3 md:gap-4 text-xl md:text-4xl font-display font-bold uppercase hover:text-gray-400 transition-colors cursor-none">
-                        <ExternalLink className="w-6 h-6 md:w-12 md:h-12 group-hover:rotate-12 transition-transform" />
+                        <ExternalLink className="w-6 h-6 md:w-12 md:h-12 group-hover:-rotate-12 transition-transform" />
                         Behance
                       </a>
                     </motion.div>
